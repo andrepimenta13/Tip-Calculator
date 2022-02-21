@@ -5,43 +5,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <title>Tip Calculator</title>
 </head>
 
 <body>
-    <div>
-        <h1>Tip Calculator</h1>
-    </div>
+    <div id='container'>
+        <div>
+            <h1 class="title">Tip Calculator</h1>
+        </div>
 
-    <div>
-        <form action="">
-            <label for="bill">
-                <p>How much was the bill?</p>
-            </label>
-            <p><input type="number" name="bill" id="bill" placeholder="100"> €</p>
+        <div>
+            <form class="tipsForm">
+                <label for="bill">
+                    <p>How much was the bill?</p>
+                </label>
+                <p><input type="number" name="bill" id="bill" placeholder="100" class="formInput"> €</p>
 
-            <label for="serviceQual">
-                <p>How do you rate our service?</p>
-            </label>
-            <p>
-                <select name="serviceQual" id="serviceQual">
-                    <option disabled selected value="0">Choose an option</option>
-                    <option value="0.3">30% - Amazing!</option>
-                    <option value="0.2">20% - Good!</option>
-                    <option value="0.15">15% - Average!</option>
-                    <option value="0.1">10% - Bad!</option>
-                    <option value="0.5">05% - Horrible!</option>
-                </select>
-            </p>
-            <label for="people">
-                <p>How many people will split the bill?</p>
-            </label>
-            <p>
-                <input type="number" name="people" placeholder="1" id="people"> People/Person
-            </p>
+                <label for="serviceQual">
+                    <p>How do you rate our service?</p>
+                </label>
+                <p>
+                    <select name="serviceQual" id="serviceQual" class="formSelect">
+                        <option disabled selected value="0">Choose an option</option>
+                        <option value="0.3">30% - Amazing!</option>
+                        <option value="0.2">20% - Good!</option>
+                        <option value="0.15">15% - Average!</option>
+                        <option value="0.1">10% - Bad!</option>
+                        <option value="0.5">05% - Horrible!</option>
+                    </select>
+                </p>
+                <label for="people">
+                    <p>How many people will split the bill?</p>
+                </label>
+                <p>
+                    <input type="number" name="people" placeholder="1" id="people" class="formInput"> People/Person
+                </p>
 
-            <button type="submit">Calculate</button>
-        </form>
+                <button type="submit" class="formSubmit">Calculate</button>
+            </form>
+        </div>
     </div>
 
 </body>
