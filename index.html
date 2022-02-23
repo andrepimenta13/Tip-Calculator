@@ -19,11 +19,11 @@
         </div>
 
         <div>
-            <form class="tipsForm">
+            <form class="tipsForm" id="tipsForm">
                 <label for="bill">
                     <p>How much was the bill?</p>
                 </label>
-                <p><input type="number" name="bill" id="bill" placeholder="100" class="formInput"> €</p>
+                <p><input type="number" name="bill" id="bill" placeholder="100" class="formInput" required> €</p>
 
                 <label for="serviceQual">
                     <p>How do you rate our service?</p>
@@ -35,21 +35,27 @@
                         <option value="0.2">20% - Good!</option>
                         <option value="0.15">15% - Average!</option>
                         <option value="0.1">10% - Bad!</option>
-                        <option value="0.5">05% - Horrible!</option>
+                        <option value="0.5">5% - Horrible!</option>
                     </select>
                 </p>
                 <label for="people">
                     <p>How many people will split the bill?</p>
                 </label>
                 <p>
-                    <input type="number" name="people" placeholder="1" id="people" class="formInput"> People/Person
+                    <input type="number" name="people" placeholder="1" id="people" class="formInput" required>
+                    People/Person
                 </p>
 
                 <button type="submit" class="formSubmit">Calculate</button>
             </form>
         </div>
+        <div id="totalTip">
+            Total Tip:
+            €<span id="tip"> 0.00</span>
+            <p id="each">cada</p>
+        </div>
     </div>
-
+    <script src="scripts.js"></script>
 </body>
 
 </html>
