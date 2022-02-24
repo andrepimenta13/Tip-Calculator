@@ -10,11 +10,21 @@ function calculateTip(event) {
         return;
     }
 
+    if (numOfPeople == '' | numOfPeople <= 1) {
+        numOfPeople = 1;
+        document.getElementById('each').style.display = 'none'; //fazer o elemento desaparecer
+    } else {
+        document.getElementById('each').style.display = 'block'; //fazer o elemento aparecer
+    }
+
+    let total = (bill * serviceQual) / numOfPeople;
+    total = total.toFixed(2); //para colocar o valor com 2 casas decimais
+    document.getElementById('tip').innerHTML = total;
+    document.getElementById('totalTip').style.display = 'block';
+
 }
 
 document.getElementById('totalTip').style.display = 'none'; //fazer apagar um elemento html
 document.getElementById('each').style.display = 'none';
 
 document.getElementById('tipsForm').addEventListener('submit', calculateTip)
-
-//58:22
